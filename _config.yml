@@ -1,6 +1,6 @@
 # main text of home
 name: Raquel Moraes
-bio: Psicóloga & Blogueira
+bio: Digital Content Creator
 
 # twitter summary info
 description: Site da Kel :) 
@@ -8,7 +8,7 @@ description: Site da Kel :)
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/fotos/kelmoraees1.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -38,7 +38,7 @@ permalink: /:title/
 # facebook: myfacebook
 # twitter: mytwitter
 # google: mygoogle
-instagram: kelmoraees
+
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
@@ -49,10 +49,12 @@ instagram: kelmoraees
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
+instagram: kelmoraees
 medium: kelmrss
+email: contato@kelmoraes.com.br
+whatsapp: tiny.cc/falecomakel
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: contato@kelmoraes.com.br
 
 # authors:
 #     johndoe:
