@@ -2,9 +2,10 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/Gawiga/dongaldino" }
+#git_source(:github) {|repo_name| "https://github.com/Gawiga/dongaldino" }
 
 # gem "rails"
 gem 'github-pages'
 gem 'html-proofer'
 gem 'jekyll-admin'
+gem 'wdm'
