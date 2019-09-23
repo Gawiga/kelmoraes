@@ -1,6 +1,6 @@
 <div class="social-links">
     {% if site.instagram %}
-    <a class="link" data-title="instagram.com/{{ site.instagram }}" href="http://instagram.com/{{ site.instagram }}"
+    <a title="instagram" class="link" data-title="instagram.com/{{ site.instagram }}" href="http://instagram.com/{{ site.instagram }}"
         target="_blank">
         <svg class="icon icon-instagram">
             <use xlink:href="#icon-instagram"></use>
@@ -8,24 +8,26 @@
     </a>
     {% endif %}
     {% if site.medium %}
-    <a class="link" data-title="medium.com/{{ site.medium }}" href="https://medium.com/{{ site.medium }}" target="_blank">
+    <a title="blog" class="link" data-title="medium.com/{{ site.medium }}" href="https://medium.com/{{ site.medium }}" target="_blank">
+        <!-- <img src="assets/medium.svg" /> -->
         <svg class="icon icon-medium">
             <use xlink:href="#icon-medium"></use>
         </svg>
     </a>
     {% endif %}
     {% if site.whatsapp %}
-    <a class="link" data-title="{{ site.whatsapp }}" href="http://tiny.cc/falecomakel">
+    <a title="whatsapp" class="link" data-title="{{ site.whatsapp }}" href="http://tiny.cc/falecomakel">
         <svg class="icon icon-whatsapp">
             <use xlink:href="#icon-whatsapp"></use>
         </svg>
     </a>
     {% endif %}
-    {% if site.email %}
-    <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
+
+    <!-- {% if site.email %}
+    <a title="e-mail" class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
         <svg class="icon icon-mail">
             <use xlink:href="#icon-mail"></use>
         </svg>
     </a>
-    {% endif %}
+    {% endif %} -->
 </div>
