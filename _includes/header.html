@@ -10,11 +10,13 @@ or page.title == "Tags"
 <header class="header-home {% if site.animation %}animated{% endif %}">
     {% if site.about %}
     <a class="link" href="{{ site.url }}/about">
-        <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+        <img class="selfie" alt="{{ site.name }}"
+            src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
     </a>
     {% else %}
     <span class="link">
-        <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+        <img class="selfie" alt="{{ site.name }}"
+            src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
     </span>
     {% endif %}
 
@@ -28,7 +30,7 @@ or page.title == "Tags"
 </header>
 {% endif %}
 
-<body>
+<body class="body animated">
     <p class="justifica">
         A criadora de conteúdo digital Raquel Moraes, atua desde 2018 no ramo do marketing digital, proporcionando aos
         seus clientes o melhor resultado digital. Com um público de mais de quinze mil seguidores assíduos, em seu
@@ -41,15 +43,13 @@ or page.title == "Tags"
         Para maiores informações sobre o perfil do público de Raquel e acesso o Mídia Kit, entre em contato.
     </p>
     <p class="centraliza">
-        
-        <!-- Assista um pouco do trabalho de Raquel acessando seu perfil no Instagram, e conferindo seu portfólio disponível
-        nos HighLights do perfil. -->
         Nos vemos no instagram. 💋
-        <br><br>
-        <iframe src="https://www.instagram.com/p/BvhtF7RFRvu/embed" allowtransparency="true"
-            frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:500px; height:600px"></iframe>
-        <!-- <div style="font:10px/14px 'Roboto','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:400;width:555px;text-align:right">
-           </div> -->
-
     </p>
+    <!-- <iframe src="https://www.instagram.com/p/BvhtF7RFRvu/embed" allowtransparency="true"
+            frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:500px; height:600px"></iframe>
+        < <div style="font:10px/14px 'Roboto','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:400;width:555px;text-align:right">
+           </div>  -->
+    <div class="centraliza">
+        {% include instagram.html %}
+    </div>
 </body>
