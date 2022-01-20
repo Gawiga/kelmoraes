@@ -6,3 +6,15 @@
 ---
 
 [MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
+
+---
+
+## COMANDOS
+```
+
+bundle update
+bundle exec jekyll serve
+bundle exec jekyll build
+
+
+```
