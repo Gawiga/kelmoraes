@@ -9,9 +9,7 @@ or page.title == "Projects"
 
 {% if showHeader == true %}
 <header class="header-home {% if site.animation %}animated{% endif %}">
-    <!-- <h1 class="title">{{ site.name }}</h1>
-    <h2 class="description">{{ site.bio }}</h2>   -->
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <a class="link" href="{{ site.url }}/#">
     <img class="selfie" alt="{{ site.name }}"
         src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
