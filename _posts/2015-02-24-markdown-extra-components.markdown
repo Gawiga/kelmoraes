@@ -26,7 +26,6 @@ You can pick as item to see how to apply in markdown.
 - [Spoiler](#spoiler)
 
 #### External Elements
-- [Gist](#gist)
 - [Codepen](#codepen)
 - [Slideshare](#slideshare)
 - [Videos](#videos)
@@ -137,17 +136,6 @@ You can add an especial hidden content that appears on hover.
 
 ---
 
-## Gist
-
-You can add Gists from github.
-
-{% highlight raw %}
-{ % gist sergiokopplin/91ff4220480727b47224245ee2e9c291 % }
-{% endhighlight %}
-
-{% gist sergiokopplin/91ff4220480727b47224245ee2e9c291 %}
-
----
 
 ## Codepen
 
