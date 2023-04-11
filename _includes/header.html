@@ -1,10 +1,5 @@
-{% if page.title == "Home"
-or page.title == "Blog"
-or page.title == "Tags"
-or page.title == "Cuidados"
-or page.title == "Projects"
-%}
-{% assign showHeader = true %}
+{% if page.mostrarCabecalho == "sim" %}
+    {% assign showHeader = true %}
 {% endif %}
 
 {% if showHeader == true %}
@@ -14,6 +9,7 @@ or page.title == "Projects"
     <img class="selfie" alt="{{ site.name }}"
         src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
     </a>
+    {% seo %}
     {% include social-links.html %}
 </header>
 {% endif %}
