@@ -13,6 +13,7 @@
 ```
 
 bundle update
+bundle update jekyll
 bundle exec jekyll serve
 bundle exec jekyll build
 
