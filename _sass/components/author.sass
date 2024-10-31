@@ -1,7 +1,9 @@
+@use "../base/variables"
+
 .author
     padding: 3rem 0
-    border-bottom: 1px solid $epsilon
-    border-top: 1px solid $epsilon
+    border-bottom: 1px solid variables.$epsilon
+    border-top: 1px solid variables.$epsilon
     max-width: 100%
     margin: 4rem auto 0
 
@@ -16,32 +18,32 @@
 
     > .toright > .name
         font-size: 1.5rem
-        font-family: $fontSans
+        font-family: variables.$fontSans
         font-weight: 500
         margin: 6px 0 0
 
-        @media #{$mobile}
+        @media #{variables.$mobile}
             width: 100%
             display: block
 
-        @media #{$tablet}
+        @media #{variables.$tablet}
             width: 100%
             display: block
 
     > .toright > .bio
-        font-family: $fontSans
+        font-family: variables.$fontSans
         font-weight: 300
-        color: $gama
+        color: variables.$gama
         font-size: 1.3rem
         text-align: justify
         line-height: 1.5
         margin: 0
 
-        @media #{$mobile}
+        @media #{variables.$mobile}
             width: 100%
             display: block
 
-        @media #{$tablet}
+        @media #{variables.$tablet}
             width: 100%
             display: block
 
@@ -49,10 +51,10 @@
         width: 10%
         display: inline-block
 
-        @media #{$mobile}
+        @media #{variables.$mobile}
             width: 20%
 
-        @media #{$tablet}
+        @media #{variables.$tablet}
             width: 20%
 
     > .toright
@@ -60,10 +62,10 @@
         display: inline-block
         vertical-align: top
 
-        @media #{$mobile}
+        @media #{variables.$mobile}
             width: 78%
 
-        @media #{$tablet}
+        @media #{variables.$tablet}
             width: 78%
 
 .no-disqus

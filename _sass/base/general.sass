@@ -1,21 +1,23 @@
+@use "variables"
+
 body, html
 	font-size: 62.5%
 
 body
 	line-height: 1
-	font: 16px $fontSans
-	color: $alpha
+	font: 16px variables.$fontSans
+	color: variables.$alpha
 
 h1, h2, h3, h4
-	font-family: $fontSans
-	color: $beta
+	font-family: variables.$fontSans
+	color: variables.$beta
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
 
 h1
 	font-size: 3rem
 	letter-spacing: -1px
-	color: $beta
+	color: variables.$beta
 	font-weight: 700
 
 h2
@@ -28,17 +30,17 @@ h4
 	font-size: 1.6rem
 
 a
-	color: $delta
+	color: variables.$delta
 	text-decoration: underline
 
 p
 	line-height: 1.7
-	color: $alpha
+	color: variables.$alpha
 	font-weight: 300
 	margin-bottom: 20px
 	letter-spacing: 0.4px
 
-	@media #{$mobile}
+	@media #{variables.$mobile}
 		letter-spacing: 0.2px
 
 strong
@@ -50,7 +52,7 @@ ol
 	li
 		line-height: 2.4rem
 		font-weight: 300
-		color: $alpha
+		color: variables.$alpha
 
 img,
 pre,
@@ -70,10 +72,10 @@ figcaption
 	width: 100%
 	text-align: center
 	font-size: 1.3rem
-	color: $gama
+	color: variables.$gama
 	font-weight: 300
 
-	@media #{$mobile}
+	@media #{variables.$mobile}
 		font-size: 1.2rem
 
 blockquote
@@ -94,7 +96,7 @@ figure.highlight
 code,
 tt
 	padding: 1px 0
-	font-family: $fontMonospace
+	font-family: variables.$fontMonospace
 	font-size: 12px
 	line-height: 20px
 	background: #fff
@@ -106,12 +108,12 @@ pre
 	margin: 0 0 1.75em 0
 	width: 100%
 	padding: 5px 10px
-	font-family: $fontMonospace
+	font-family: variables.$fontMonospace
 	font-size: 1.2rem
 	line-height: 2rem
 	overflow: auto
 	background: #fff
-	border: 1px solid $epsilon
+	border: 1px solid variables.$epsilon
 	border-radius: 2px
 
 .wrapper-normal,
@@ -120,10 +122,10 @@ pre
 	width: 96%
 	margin: 0 auto
 
-	@media #{$mobile}
+	@media #{variables.$mobile}
 		width: 88%
 
-	@media #{$tablet}
+	@media #{variables.$tablet}
 		width: 88%
 
 .wrapper-normal

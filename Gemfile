@@ -7,7 +7,7 @@ source "https://rubygems.org"
 # gem "rails"
 # gem 'github-pages', '220'
 # gem 'html-proofer', '3.19.2'
-# gem 'jekyll-admin', '0.11.0'
 # gem 'wdm', '0.1.1'
 gem "jekyll"
+# gem 'jekyll-admin', '0.11.0'
 gem 'jekyll-seo-tag', '~> 2.8'

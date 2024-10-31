@@ -1,3 +1,5 @@
+@use "../base/variables"
+
 .share
     float: right
     width: 40%
@@ -6,7 +8,7 @@
     position: relative
     top: -10px
 
-    @media #{$mobile}
+    @media #{variables.$mobile}
         width: 100%
         display: block
         top: 0
@@ -14,7 +16,7 @@
         float: none
         margin-top: 5px
 
-    @media #{$tablet}
+    @media #{variables.$tablet}
         width: 100%
         display: block
         top: 0
@@ -37,10 +39,10 @@
         margin-left: 5px
         text-decoration: none
 
-        @media #{$mobile}
+        @media #{variables.$mobile}
             margin: 0 5px 10px 0
 
-        @media #{$tablet}
+        @media #{variables.$tablet}
             margin: 0 5px 10px 0
 
     > .twitter

@@ -1,9 +1,11 @@
+@use "../base/variables"
+
 .side-by-side
-    @media #{$above}
+    @media #{variables.$above}
         width: 130%
         margin: 6rem 0 6rem -15%
 
-    @media #{$below}
+    @media #{variables.$below}
         width: 100%
         margin: 4rem 0
 
@@ -12,26 +14,26 @@
         display: inline-block
         width: 47.5%
 
-        @media #{$below}
+        @media #{variables.$below}
             img
                 text-align: center
                 display: block
                 margin: 0 auto
 
     > .toleft
-        @media #{$above}
+        @media #{variables.$above}
             margin-right: 2%
 
-        @media #{$below}
+        @media #{variables.$below}
             width: 100%
             margin: 0 0 4rem 0
 
     > .toright
-        @media #{$above}
+        @media #{variables.$above}
             margin-left: 2%
             vertical-align: top
 
-        @media #{$below}
+        @media #{variables.$below}
             width: 100%
             margin: 0 0 4rem 0
 
@@ -39,5 +41,5 @@
     > .toright > p
         margin: 0 0 4rem 0
 
-        @media #{$below}
+        @media #{variables.$below}
             margin: 0
