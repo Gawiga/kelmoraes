@@ -1,135 +1,229 @@
 @use "variables"
 
+// ==========================================
+// RENAISSANCE THEME - Dark Lilac Base Styles
+// Mobile-first, elegant design with larger fonts
+// ==========================================
+
+// Reset & Base
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
 body, html
-	font-size: 62.5%
+    font-size: 62.5%
+    scroll-behavior: smooth
 
 body
-	line-height: 1
-	font: 16px variables.$fontSans
-	color: variables.$alpha
+    line-height: 1.7
+    font: 1.8rem variables.$fontSerif
+    color: variables.$charcoal
+    background-color: variables.$cream
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
 
-h1, h2, h3, h4
-	font-family: variables.$fontSans
-	color: variables.$beta
-	-webkit-font-smoothing: antialiased
-	text-rendering: optimizeLegibility
+// Typography - Renaissance elegance with larger sizes
+h1, h2, h3, h4, h5, h6
+    font-family: variables.$fontDisplay
+    color: variables.$charcoal
+    font-weight: 400
+    line-height: 1.3
+    margin: 0 0 2rem 0
+    letter-spacing: 0.03em
 
 h1
-	font-size: 3rem
-	letter-spacing: -1px
-	color: variables.$beta
-	font-weight: 700
+    font-size: 3.8rem
+    font-weight: 300
+    color: variables.$burgundy
+    text-align: center
+
+    @media #{variables.$desktop}
+        font-size: 5rem
 
 h2
-	font-size: 2.2rem
+    font-size: 2.8rem
+    font-weight: 400
+    color: variables.$gold
+
+    @media #{variables.$desktop}
+        font-size: 3.4rem
 
 h3
-	font-size: 2rem
+    font-size: 2.4rem
+    font-weight: 400
+    color: variables.$charcoal
 
 h4
-	font-size: 1.6rem
+    font-size: 2rem
+    font-weight: 500
+    color: variables.$warm-gray
 
+// Links - elegant lilac on hover
 a
-	color: variables.$delta
-	text-decoration: underline
+    color: variables.$burgundy
+    text-decoration: none
+    transition: color 0.3s ease, border-color 0.3s ease
 
+    &:hover
+        color: variables.$gold
+
+// Paragraphs - larger for readability
 p
-	line-height: 1.7
-	color: variables.$alpha
-	font-weight: 300
-	margin-bottom: 20px
-	letter-spacing: 0.4px
+    line-height: 1.9
+    color: variables.$charcoal
+    font-weight: 300
+    margin-bottom: 2.5rem
+    font-size: 2.4rem
+    letter-spacing: 0.01em
 
-	@media #{variables.$mobile}
-		letter-spacing: 0.2px
+    @media #{variables.$mobile}
+        font-size: 1.8rem
+        line-height: 1.8
 
 strong
-	font-weight: 400
-	color: #000
+    font-weight: 500
+    color: variables.$charcoal
 
+em
+    font-style: italic
+    color: variables.$burgundy
+
+// Lists
 ul,
 ol
-	li
-		line-height: 2.4rem
-		font-weight: 300
-		color: variables.$alpha
+    margin: 2rem 0
+    padding-left: 2.5rem
 
-img,
-pre,
-iframe
-	max-width: 100%
+    li
+        line-height: 1.9
+        font-weight: 300
+        color: variables.$charcoal
+        margin-bottom: 1rem
+        font-size: 1.8rem
 
-img,
-pre
-	border-radius: 4px
+        &::marker
+            color: variables.$gold
 
-figcaption
-	position: relative
-	top: -20px
-	left: 0
-	right: 0
-	margin: 0 auto
-	width: 100%
-	text-align: center
-	font-size: 1.3rem
-	color: variables.$gama
-	font-weight: 300
+// Images
+img
+    max-width: 100%
+    height: auto
+    display: block
+    border-radius: 2px
 
-	@media #{variables.$mobile}
-		font-size: 1.2rem
-
+// Blockquotes
 blockquote
-	padding-left: 15px
-	border-left: 3px solid #eee
+    border-left: 3px solid variables.$gold
+    padding: 2rem 2.5rem
+    margin: 3rem 0
+    background: variables.$cream-dark
+    font-style: italic
+    color: variables.$warm-gray
+    border-radius: 0 4px 4px 0
 
+    p
+        margin-bottom: 0
+
+// Horizontal rule - ornamental
 hr
-	border: none
-	height: 1px
-	margin: 40px auto
-	background: #eee
-	width: 100%
+    border: none
+    height: 1px
+    margin: 5rem auto
+    background: linear-gradient(to right, transparent, variables.$burgundy, transparent)
+    width: 60%
 
-figure.highlight
-	width: 100%
-	margin: 0
+// Tables
+table
+    width: 100%
+    border-collapse: collapse
+    margin: 2.5rem 0
+    font-size: 1.7rem
 
+    th,
+    td
+        padding: 1.2rem
+        border: 1px solid variables.$light-border
+        text-align: left
+
+    th
+        background: variables.$cream-dark
+        font-weight: 500
+        color: variables.$burgundy
+
+// Code
 code,
 tt
-	padding: 1px 0
-	font-family: variables.$fontMonospace
-	font-size: 12px
-	line-height: 20px
-	background: #fff
-	border-radius: 2px
-	border-radius: 2px
+    padding: 0.3rem 0.6rem
+    font-family: variables.$fontMonospace
+    font-size: 1.5rem
+    background: variables.$cream-dark
+    border-radius: 3px
+    color: variables.$burgundy
 
 pre
-	box-sizing: border-box
-	margin: 0 0 1.75em 0
-	width: 100%
-	padding: 5px 10px
-	font-family: variables.$fontMonospace
-	font-size: 1.2rem
-	line-height: 2rem
-	overflow: auto
-	background: #fff
-	border: 1px solid variables.$epsilon
-	border-radius: 2px
+    box-sizing: border-box
+    margin: 0 0 2.5rem 0
+    width: 100%
+    padding: 2rem
+    font-family: variables.$fontMonospace
+    font-size: 1.5rem
+    line-height: 1.7
+    overflow: auto
+    background: variables.$cream-dark
+    border: 1px solid variables.$light-border
+    border-radius: 4px
 
+    code
+        padding: 0
+        background: transparent
+
+// Wrappers - mobile first
 .wrapper-normal,
 .wrapper-large
-	height: 100%
-	width: 96%
-	margin: 0 auto
+    height: 100%
+    width: 100%
+    max-width: 680px
+    margin: 0 auto
+    padding: 0 2.5rem
 
-	@media #{variables.$mobile}
-		width: 88%
+    @media #{variables.$tablet}
+        max-width: 760px
+        padding: 0 3.5rem
 
-	@media #{variables.$tablet}
-		width: 88%
-
-.wrapper-normal
-	max-width: 560px
+    @media #{variables.$desktop}
+        max-width: 860px
+        padding: 0 5rem
 
 .wrapper-large
-	max-width: 810px
+    max-width: 760px
+
+    @media #{variables.$tablet}
+        max-width: 900px
+
+    @media #{variables.$desktop}
+        max-width: 1020px
+
+// Selection color
+::selection
+    background: variables.$burgundy
+    color: variables.$cream
+
+::-moz-selection
+    background: variables.$burgundy
+    color: variables.$cream
+
+// Smooth scrollbar
+::-webkit-scrollbar
+    width: 10px
+
+::-webkit-scrollbar-track
+    background: variables.$cream
+
+::-webkit-scrollbar-thumb
+    background: variables.$burgundy
+    border-radius: 5px
+
+    &:hover
+        background: variables.$gold

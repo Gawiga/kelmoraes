@@ -1,5 +1,9 @@
 @use "../base/variables"
 
+// ==========================================
+// RENAISSANCE THEME - Share (Dark Lilac)
+// ==========================================
+
 .share
     float: right
     width: 40%
@@ -8,21 +12,13 @@
     position: relative
     top: -10px
 
-    @media #{variables.$mobile}
+    @media #{variables.$mobile}, #{variables.$tablet}
         width: 100%
         display: block
         top: 0
         text-align: left
         float: none
-        margin-top: 5px
-
-    @media #{variables.$tablet}
-        width: 100%
-        display: block
-        top: 0
-        text-align: left
-        float: none
-        margin-top: 5px
+        margin-top: 6px
 
     > .twitter,
     > .facebook,
@@ -31,19 +27,16 @@
     > .reddit
         display: inline
         vertical-align: middle
-        font-size: 13px
+        font-size: 14px
         font-weight: 700
         color: #fff
-        padding: 6px 10px
+        padding: 7px 12px
         border-radius: 3px
-        margin-left: 5px
+        margin-left: 6px
         text-decoration: none
 
-        @media #{variables.$mobile}
-            margin: 0 5px 10px 0
-
-        @media #{variables.$tablet}
-            margin: 0 5px 10px 0
+        @media #{variables.$mobile}, #{variables.$tablet}
+            margin: 0 6px 12px 0
 
     > .twitter
         background: #4fafed
@@ -60,14 +53,10 @@
     > .reddit
         background: #ff4500
 
-    // #bug
-    // can't use .icon with >
-    // don't know why - sorry
-    // take this insted: youtube.com/watch?v=59Zcx9YbZxI
     svg
         fill: #fff
         position: relative
         top: 3px
         margin: 0
-        margin-right: 4px
+        margin-right: 5px
         display: inherit

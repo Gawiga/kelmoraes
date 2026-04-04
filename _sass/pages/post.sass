@@ -1,62 +1,97 @@
 @use "../base/variables"
 
+// ==========================================
+// RENAISSANCE THEME - Post (Dark Lilac)
+// ==========================================
+
 .post
-    margin-top: 125px
+    margin-top: 3rem
+    padding: 3rem 0
 
     > .title
         text-align: center
-        margin-bottom: 3rem
+        margin-bottom: 2.5rem
+        font-family: variables.$fontDisplay
+        font-weight: 300
+        font-size: 3.4rem
+        color: variables.$burgundy
+
+        @media #{variables.$desktop}
+            font-size: 4.2rem
 
     > .date,
     > .post-tags
-        color: variables.$gama
+        color: variables.$warm-gray
         font-weight: 300
-        font-size: 1.4rem
+        font-size: 1.6rem
         text-transform: uppercase
         text-align: center
         display: block
-        margin-bottom: 6rem
-        letter-spacing: 1px
+        letter-spacing: 0.18em
         -webkit-font-smoothing: antialiased
         text-rendering: optimizeLegibility
 
     > .date
         margin-bottom: 2rem
+        font-style: italic
 
-    > .post-tags > .item
-        padding: 2px 8px
-        border-radius: 3px
-        font-size: 1.1rem
-        background: variables.$epsilon
-        color: variables.$alpha
-        letter-spacing: 1px
-        margin: 3px 1px
-        text-decoration: none
-        display: inline-block
+    > .post-tags
+        margin-bottom: 4rem
 
-    // general style
+        > .item
+            padding: 0.5rem 1.2rem
+            border-radius: 2px
+            font-size: 1.4rem
+            background: variables.$cream-dark
+            color: variables.$warm-gray
+            letter-spacing: 0.1em
+            margin: 0.4rem 0.6rem
+            text-decoration: none
+            display: inline-block
+            border: 1px solid variables.$light-border
+            transition: all 0.3s ease
+
+            &:hover
+                border-color: variables.$burgundy
+                color: variables.$burgundy
+
+    // Content typography
     > h2,
     > h3,
     > h4
-        margin-top: 40px
+        margin-top: 3.5rem
+        font-family: variables.$fontDisplay
 
         a
             text-decoration: none
+            color: variables.$burgundy
+
+            &:hover
+                color: variables.$gold
 
     > .title-image
-        max-height: 120px
+        max-height: 180px
         display: block
         margin: 0 auto
+        border-radius: 2px
 
     > .blog-navigation
-        font-size: 1.4rem
+        font-size: 1.7rem
         display: block
         width: auto
         overflow: hidden
+        font-family: variables.$fontSerif
+
         a
             display: block
             width: 50%
             float: left
-            margin: 1em 0
+            margin: 2rem 0
+            color: variables.$burgundy
+            transition: color 0.3s ease
+
+            &:hover
+                color: variables.$gold
+
         .next
             text-align: right

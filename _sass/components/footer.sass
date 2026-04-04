@@ -1,54 +1,88 @@
 @use "../base/variables"
 
+// ==========================================
+// RENAISSANCE THEME - Footer
+// Dark lilac ornamental footer
+// ==========================================
+
 .footer-main
-    border-top: 1px solid variables.$epsilon
-    padding: 18px 0
-    margin: 18px 0 0
-    font-size: 1.3rem
-    color: variables.$gama
+    border-top: 1px solid variables.$light-border
+    padding: 4rem 2.5rem
+    margin: 5rem 0 0
+    font-size: 1.7rem
+    color: variables.$warm-gray
     font-weight: 300
     text-align: center
     position: relative
+    background: variables.$cream-dark
 
-    &:before
+    // Ornamental element
+    &::before
         display: block
-        content: " "
-        width: 7px
-        height: 7px
-        border: variables.$epsilon 1px solid
+        content: "✦"
+        font-size: 1.5rem
+        color: variables.$burgundy
         position: absolute
-        top: -5px
+        top: -1rem
         left: 50%
-        margin-left: -5px
-        background: #FFF
-        box-shadow: #FFF 0 0 0 5px
-        border-radius: 3px
+        transform: translateX(-50%)
+        background: variables.$cream-dark
+        padding: 0 1.5rem
 
     > .link
         display: inline
 
         > .icon
-            width: 215px !important
-            fill: variables.$gama !important
-            transition: ease-in-out all .3s
+            width: 22px
+            height: 22px
+            fill: variables.$warm-gray
+            transition: fill 0.3s ease
             position: relative
             top: 3px
             display: inherit
             margin: 0
 
             &:hover
-                fill: variables.$delta !important
+                fill: variables.$burgundy
 
     > .extra
-        color: variables.$gama
+        color: variables.$warm-gray
         margin-top: 0
+        line-height: 2
 
         > .link
-            color: variables.$beta
+            color: variables.$burgundy
             text-decoration: none
             border-bottom: 1px solid transparent
-            transition: ease-in-out all .3s
+            transition: all 0.3s ease
             padding-bottom: 1px
+            font-size: 1.6rem
 
             &:hover
-                border-color: variables.$gama
+                color: variables.$gold
+                border-color: variables.$gold
+
+    // Footer navigation
+    .footer-nav
+        margin: 2rem 0
+
+        > .list
+            list-style: none
+            margin: 0
+            padding: 0
+
+            > .item
+                display: inline-block
+                margin: 0 1.5rem
+
+                > .link
+                    font-family: variables.$fontSerif
+                    font-size: 1.6rem
+                    color: variables.$warm-gray
+                    text-decoration: none
+                    letter-spacing: 0.12em
+                    text-transform: uppercase
+                    transition: color 0.3s ease
+
+                    &:hover
+                        color: variables.$burgundy

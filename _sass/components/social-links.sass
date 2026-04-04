@@ -1,65 +1,42 @@
 @use "../base/variables"
 
+// ==========================================
+// RENAISSANCE THEME - Social Links
+// Larger elegant social icons with lilac glow
+// ==========================================
+
 .social-links
-    margin: 5px
+    margin: 2rem 0
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 1.5rem
 
     > .link
-        margin: 5px
+        margin: 0
         text-decoration: none
         position: relative
-        display: inline-block
-  
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 54px
+        height: 54px
+        border-radius: 50%
+        border: 1px solid variables.$light-border
+        transition: all 0.3s ease
+        background: variables.$cream
 
         > .icon
-            fill: variables.$delta
+            width: 26px
+            height: 26px
+            fill: variables.$warm-gray
+            transition: fill 0.3s ease
 
         &:hover
+            border-color: variables.$burgundy
+            background: variables.$cream-dark
+            transform: translateY(-3px)
+            box-shadow: 0 6px 20px rgba(199, 125, 255, 0.3)
+
             > .icon
-                fill: variables.$zeta
-
-        // &:hover:before
-        //     opacity: 1
-        //     display: inline-block
-        //     transform: translate3d(0,0,0)
-        //     white-space: nowrap
-
-        &:before
-            content: attr(data-title)
-            display: none
-            position: absolute
-            bottom: -100px
-            left: -6px
-            margin: 0 auto
-            font-size: 13px
-            padding: 3px 10px
-            background: variables.$beta
-            color: #fff
-            border-radius: 2px
-            height: 22px
-            line-height: 22px
-            opacity: 0
-            transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear
-            transform: translate3d(0,-8px,0)
-            z-index: 99
-
-        &:after
-            content: ""
-            position: absolute
-            top: 65px
-            left: 45px
-            width: 0
-            height: 0
-            border-left: 5px solid transparent
-            border-right: 5px solid transparent
-            border-bottom: 6px solid variables.$beta
-            opacity: 0
-            transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear
-            transform: translate3d(0,-8px,0)
-            z-index: 100
-
-        // &:hover:after
-        //     opacity: 1
-        //     transform: translate3d(0,0,0)
-
-    > .icon
-        transition: all ease-in-out .2s
+                fill: variables.$burgundy

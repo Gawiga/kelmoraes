@@ -4,22 +4,19 @@
 
 {% if showHeader == true %}
 <header class="header-home {% if site.animation %}animated{% endif %}">
-    <!-- Optimized font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"></noscript>
-
     <a class="link" href="{{ site.url }}/#" aria-label="Ir para página principal">
-    <img class="selfie" alt="{{ site.name }}"
-        src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}"
-        loading="lazy"
-        decoding="async" />
+        <img class="selfie" alt="{{ site.name }}"
+            src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}"
+            loading="lazy"
+            decoding="async" />
     </a>
+
+    <h1 class="title">{{ site.name }}</h1>
+    <p class="subtitle">{{ site.tagline }}</p>
+
     {% seo %}
 
-    <!-- Schema.org JSON-LD for LocalBusiness/Psychologist -->
+    <!-- Schema.org JSON-LD for Psychologist -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -45,4 +42,3 @@
     {% include social-links.html %}
 </header>
 {% endif %}
-

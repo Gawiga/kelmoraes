@@ -5,6 +5,7 @@ permalink: /privacidade.html
 ---
 <div id="privacidade">
     <h1>Política de Privacidade</h1>
+
     <p class="justifica">
         Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações pessoais ao visitar nosso site.
     </p>
@@ -57,6 +58,6 @@ permalink: /privacidade.html
     </p>
 
     <p class="centraliza">
-        <a href="/" aria-label="Voltar para a página inicial">Pagina Inicial</a>
+        <a href="/" class="cta-button" aria-label="Voltar para a página inicial">Voltar ao Início</a>
     </p>
 </div>

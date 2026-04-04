@@ -1,45 +1,49 @@
 @use "../base/variables"
 
-.side-by-side
-    @media #{variables.$above}
-        width: 130%
-        margin: 6rem 0 6rem -15%
+// ==========================================
+// RENAISSANCE THEME - Side by Side (Dark Lilac)
+// ==========================================
 
-    @media #{variables.$below}
+.side-by-side
+    @media #{variables.$desktop}
+        width: 130%
+        margin: 7rem 0 7rem -15%
+
+    @media #{variables.$mobile}, #{variables.$tablet}
         width: 100%
-        margin: 4rem 0
+        margin: 5rem 0
 
     > .toleft,
     > .toright
         display: inline-block
         width: 47.5%
 
-        @media #{variables.$below}
+        @media #{variables.$mobile}, #{variables.$tablet}
             img
                 text-align: center
                 display: block
                 margin: 0 auto
 
     > .toleft
-        @media #{variables.$above}
+        @media #{variables.$desktop}
             margin-right: 2%
 
-        @media #{variables.$below}
+        @media #{variables.$mobile}, #{variables.$tablet}
             width: 100%
-            margin: 0 0 4rem 0
+            margin: 0 0 5rem 0
 
     > .toright
-        @media #{variables.$above}
+        @media #{variables.$desktop}
             margin-left: 2%
             vertical-align: top
 
-        @media #{variables.$below}
+        @media #{variables.$mobile}, #{variables.$tablet}
             width: 100%
-            margin: 0 0 4rem 0
+            margin: 0 0 5rem 0
 
     > .toleft > p,
     > .toright > p
-        margin: 0 0 4rem 0
+        margin: 0 0 5rem 0
 
-        @media #{variables.$below}
+        @media #{variables.$mobile}, #{variables.$tablet}
             margin: 0

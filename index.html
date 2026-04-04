@@ -3,28 +3,40 @@ layout: home
 title: Raquel Moraes
 mostrarCabecalho: sim
 ---
-<body class="body animated" style="font-size: large;">
-    <p class="centraliza" style="font-size: xx-large; margin-top: 20px;">
-        Seja bem vindo(a)! 😊
-    </p>
+
+<section class="section" aria-label="Boas-vindas">
+    <h2>Seja bem vindo(a)!</h2>
+    <div class="section-divider"></div>
     <p class="justifica">
         Meu nome é Raquel Moraes, moro em Jundiaí, sou psicóloga clínica e criadora de conteúdo embasado na análise do comportamento. Possuo experiência em atendimento clínico remoto e presencial, e também pratico atendimento social. Realizo avaliações psicológicas, aplicação de testes e laudos para casos específicos.
     </p>
     <p class="justifica">
         Possuo uma página no Instagram que conta atualmente com mais de 40 mil seguidores, onde falo sobre saúde mental, body positive e autocuidado.
     </p>
-    <p class="justifica">
-        Será um prazer te auxiliar nessa nova jornada em direção a maior qualidade de vida e novos recomeços!
-    </p>
-    <p class="centraliza">🧠</p>
-    <p class="justifica">
-        Deseja divulgar o seu produto nas minhas redes sociais? Entre em contato por <a href="mailto:{{ site.email }}"
-            target="_blank" rel="noopener noreferrer" aria-label="Enviar e-mail">e-mail</a> 🟠 ou pelo <a href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem pelo WhatsApp">whatsapp</a> 🟢.
-    </p>
-    <p class="centraliza">
-        Nos vemos no instagram. 💋
-    </p>
-    <div class="centraliza">
-        {% include instagram.html %}
+</section>
+
+<section class="section-light" aria-label="Sobre o atendimento">
+    <div class="wrapper-normal">
+        <h2>Atendimento Online &amp; Presencial</h2>
+        <div class="section-divider"></div>
+        <p class="justifica">
+            Será um prazer te auxiliar nessa nova jornada em direção a maior qualidade de vida e novos recomeços! Ofereço um ambiente acolhedor e sigiloso, seja no conforto da sua casa através do atendimento online ou presencialmente em meu consultório em Jundiaí.
+        </p>
     </div>
-</body>
+</section>
+
+<section class="section" aria-label="Contato e parcerias">
+    <h2>Entre em Contato</h2>
+    <div class="section-divider"></div>
+    <p class="justifica centraliza">
+        Entre em contato por <a href="mailto:{{ site.email }}"
+            target="_blank" rel="noopener noreferrer" aria-label="Enviar e-mail">e-mail</a> ou pelo <a href="https://api.whatsapp.com/send?phone={{ site.whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem pelo WhatsApp">whatsapp</a>.
+        
+    </p>
+    <p>Clique no botão abaixo para agendar sua consulta ou para parcerias e colaborações. Estou ansiosa para ouvir de você! ✨</p>
+    <p class="centraliza" style="margin-top: 3rem;">
+        <a href="https://wa.me/5511970608111?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Agendar consulta pelo WhatsApp">
+            Agende sua Consulta
+        </a>
+    </p>
+</section>

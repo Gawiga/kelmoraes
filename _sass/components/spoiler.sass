@@ -1,9 +1,15 @@
+@use "../base/variables"
+
+// ==========================================
+// RENAISSANCE THEME - Spoiler (Dark Lilac)
+// ==========================================
+
 .spoiler
     position: relative
 
-    &:before
+    &::before
         content: ''
-        background-color: #fafae0
+        background-color: variables.$cream-dark
         position: absolute
         top: 0
         bottom: 0
@@ -11,5 +17,5 @@
         right: 0
         z-index: 50
 
-    &:hover:before
+    &:hover::before
         display: none

@@ -1,76 +1,104 @@
 @use "../base/variables"
 
+// ==========================================
+// RENAISSANCE THEME - Home, Blog, Projects (Dark Lilac)
+// ==========================================
+
 .home,
 .blog,
 .projects
-    margin-top: 30px
+    margin-top: 3rem
 
     > .list
-        border-top: 1px solid variables.$epsilon
-        margin-top: 30px
-        padding-top: 40px
+        border-top: none
+        margin-top: 0
+        padding-top: 0
         position: relative
 
-        &:before
+        // Ornamental divider
+        &::before
             display: block
-            content: " "
-            width: 7px
-            height: 7px
-            border: variables.$epsilon 1px solid
-            position: absolute
-            top: -5px
-            left: 50%
-            margin-left: -5px
-            background: #FFF
-            box-shadow: #FFF 0 0 0 5px
-            border-radius: 3px
+            content: "✦"
+            font-size: 2rem
+            color: variables.$burgundy
+            text-align: center
+            margin: 4rem auto
+            position: static
+            width: auto
+            height: auto
+            border: none
+            background: transparent
+            box-shadow: none
+            border-radius: 0
 
 .home > .list,
 .blog > .list,
 .projects > .list
     > .item
         display: block
-        width: 95%
+        width: 100%
         margin: 0 auto
+        padding: 2.5rem 0
+        border-bottom: 1px solid variables.$light-border
+
+        &:last-child
+            border-bottom: none
 
     > .item > .url
         width: 100%
         display: block
-        padding: 20px 0
+        padding: 2rem 0
         text-decoration: none
 
     > .item > .url > .title
         margin: 0
-        width: 75%
-        font-weight: 500
-        transition: all ease-in-out .2s
+        width: 100%
+        font-family: variables.$fontDisplay
+        font-weight: 400
+        transition: color 0.3s ease
+        font-size: 2.4rem
+
+        @media #{variables.$tablet}
+            font-size: 2.8rem
 
     > .item:hover > .url > .title
-        color: variables.$delta
+        color: variables.$burgundy
 
-    // maybe we can't nest html5 elements
-    // can you help me?
     aside
-        position: relative
-        top: 2px
-        margin: 0
-        width: 25%
-        float: right
+        position: static
+        top: auto
+        margin: 1rem 0 0 0
+        width: 100%
+        float: none
         font-weight: 300
-        color: variables.$gama
-        text-align: right
-        transition: all ease-in-out .2s
+        color: variables.$warm-gray
+        text-align: left
+        transition: color 0.3s ease
+        font-size: 1.5rem
+        font-style: italic
 
     .item:hover .url aside
-        color: variables.$alpha
+        color: variables.$burgundy
 
 .blog > .list > .item > .url,
 .projects > .list > .item > .url
     > .title
-        display: inline
+        display: block
 
     > .emoji
         display: inline
         position: relative
-        top: -4px
-        margin-right: 10px
+        top: -2px
+        margin-right: 1rem
+        font-size: 2rem
+
+// Evidence/highlight style
+.evidence
+    background: linear-gradient(to bottom, transparent 60%, rgba(199, 125, 255, 0.15) 40%)
+    color: variables.$charcoal
+
+.star
+    > .url > .title
+        width: auto
+        display: inline
+        background: linear-gradient(to bottom, transparent 60%, rgba(199, 125, 255, 0.15) 40%)
