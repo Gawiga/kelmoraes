@@ -4,12 +4,44 @@
 
 {% if showHeader == true %}
 <header class="header-home {% if site.animation %}animated{% endif %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <a class="link" href="{{ site.url }}/#">
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"></noscript>
+
+    <a class="link" href="{{ site.url }}/#" aria-label="Ir para página principal">
     <img class="selfie" alt="{{ site.name }}"
-        src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+        src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}"
+        loading="lazy"
+        decoding="async" />
     </a>
     {% seo %}
+
+    <!-- Schema.org JSON-LD for LocalBusiness/Psychologist -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Psychologist",
+        "name": "{{ site.name }}",
+        "description": "{{ site.description }}",
+        "url": "{{ site.url }}",
+        "image": "{{ site.url }}/{{ site.picture }}",
+        "email": "mailto:{{ site.email }}",
+        "telephone": "{{ site.whatsapp }}",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jundiaí",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://www.instagram.com/{{ site.instagram }}"
+        ]
+    }
+    </script>
+
     {% include social-links.html %}
 </header>
 {% endif %}

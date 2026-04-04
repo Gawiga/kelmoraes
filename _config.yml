@@ -60,8 +60,31 @@ animation: true
 
 plugins:
   - jekyll-seo-tag
-#  - jekyll-feed
-#  - jekyll-admin
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Sass minification for performance
+sass:
+  style: compressed
+  sourcemap: never
+
+# Exclude files from build
+exclude:
+  - README.md
+  - FAQ.md
+  - ANALISE_TECNICA.md
+  - .travis.yml
+  - travis.sh
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - .editorconfig
+  - netlify.toml
+  - requirements-tests.txt
+  - tests/
+  - .github/
+  - admin/
 
 jekyll-mentions:
     base_url: https://github.com
